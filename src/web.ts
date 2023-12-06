@@ -4,7 +4,4 @@ import type { ZebraDataWedgePlugin } from './definitions';
 
 export class ZebraDataWedgeWeb
   extends WebPlugin
-  implements ZebraDataWedgePlugin
-{
-
-}
+  implements ZebraDataWedgePlugin {}

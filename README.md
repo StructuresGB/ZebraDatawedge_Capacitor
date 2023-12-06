@@ -1,6 +1,6 @@
 # ZebraDatawedge Capacitor Plugin
 
-Plugin for relaying scan events from Zebra DataWedge to Capacitor on Android devices.
+Capacitor Plugin for relaying scan events from Zebra DataWedge on Android devices.
 
 ## Install
 

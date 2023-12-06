@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
-
 import com.getcapacitor.Bridge;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -14,6 +13,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "ZebraDataWedge")
 public class ZebraDataWedgePlugin extends Plugin {
+
     private static final String LOG_TAG = "ZebraDataWedgePlugin";
 
     private ZebraDataWedge implementation = new ZebraDataWedge();
@@ -29,6 +29,7 @@ public class ZebraDataWedgePlugin extends Plugin {
         context.registerReceiver(scannerBroadcastReceiver, filter);
         Log.v(LOG_TAG, "Listening to " + context.getResources().getString(R.string.activity_intent_filter_action) + " intent");
     }
+
     private final BroadcastReceiver scannerBroadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -54,5 +55,4 @@ public class ZebraDataWedgePlugin extends Plugin {
             }
         }
     };
-
 }
