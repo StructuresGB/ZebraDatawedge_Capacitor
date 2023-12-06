@@ -5,7 +5,7 @@ Capacitor Plugin for relaying scan events from Zebra DataWedge on Android device
 ## Install
 
 ```bash
-npm install zebradatawedge
+npm install zebradatawedge-capacitor-plugin
 npx cap sync
 ```
 
@@ -29,7 +29,7 @@ Tested with version: 11.3
 ## Example
 
 ```ts
-import {ZebraDataWedge, type ZebraDataWedgeScanResult} from 'zebradatawedge'
+import {ZebraDataWedge, type ZebraDataWedgeScanResult} from 'zebradatawedge-capacitor-plugin'
 
 ZebraDataWedge.addListener('newScanEvent', (scanResult: ZebraDataWedgeScanResult) => {
   console.log('newScanEvent', `Data:${scanResult.data} Type:${scanResult.labelType} From:${scanResult.source}`)
