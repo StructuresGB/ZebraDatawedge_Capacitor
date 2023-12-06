@@ -1,12 +1,39 @@
-# zebradatawedge
+# ZebraDatawedge Capacitor Plugin
 
-Interface for Zebra DataWedge barcode reader
+Plugin for relaying scan events from Zebra DataWedge to Capacitor on Android devices.
 
 ## Install
 
 ```bash
 npm install zebradatawedge
 npx cap sync
+```
+
+## Datawedge configuration
+Tested with version: 11.3
+
+- [x] Profile Enable
+- **Applications**
+  - Choose your Capacitor application. * for activity
+- **Barcode input**
+  - [x] Enabled
+  - [x] Hardware Trigger
+- **Keystroke output**
+  - [ ] Enabled
+- **Intent output**
+  - [x] Enabled
+  - Intent action: com.datawedgecapacitorplugin.ACTION
+  - Intent category: *leave blank*
+  - Itent delivery: (x) Broadast intent
+
+## Example
+
+```ts
+import {ZebraDataWedge, type ZebraDataWedgeScanResult} from 'zebradatawedge'
+
+ZebraDataWedge.addListener('newScanEvent', (scanResult: ZebraDataWedgeScanResult) => {
+  console.log('newScanEvent', `Data:${scanResult.data} Type:${scanResult.labelType} From:${scanResult.source}`)
+})
 ```
 
 ## API
