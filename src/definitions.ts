@@ -1,3 +1,11 @@
-export interface ZebraDataWedgePlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+import {Plugin} from "@capacitor/core/types/definitions";
+
+export interface ZebraDataWedgePlugin extends Plugin {
+
+}
+
+export interface ZebraDataWedgeScanResult {
+  source: string;
+  data: string;
+  labelType: string
 }
